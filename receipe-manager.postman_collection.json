@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "1965a281-0118-4778-9a4b-b40ddafc7cc5",
+		"name": "receipe-manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27900643"
+	},
+	"item": [
+		{
+			"name": "Get-all-receipes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/receipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"receipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a receipe",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"receipeName\": \"Mutter Paneer\",\n        \"servings\": 4,\n        \"type\": \"vegetarian\",\n        \"instructions\": \"saute in the pan for 10 minutes\",\n        \"ingredients\": \"mutter,paneer,tomatoes,oil\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/receipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"receipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a receipe",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 4,\n        \"receipeName\": \"Mutter Paneer\",\n        \"servings\": 4,\n        \"type\": \"vegetarian\",\n        \"instructions\": \"saute in the pan for 20 minutes\",\n        \"ingredients\": \"mutter,paneer,tomatoes,oil\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/receipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"receipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a receipe",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 4,\n        \"receipeName\": \"Mutter Paneer\",\n        \"servings\": 4,\n        \"type\": \"vegetarian\",\n        \"instructions\": \"saute in the pan for 20 minutes\",\n        \"ingredients\": \"mutter,paneer,tomatoes,oil\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/receipes/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"receipes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search a receipe based on a filter request",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"servings\": 2,\n    \"ingredientsInclude\": \"\",\n    \"ingredientsExclude\": \"butter\",\n    \"instructions\": \"10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/receipes/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"receipes",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

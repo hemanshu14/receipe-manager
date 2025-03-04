@@ -1,0 +1,3 @@
+INSERT INTO RECEIPE (receipename, servings, isvegetarian, ingredients, instructions) VALUES ('Creamy Garlic Pasta', 4, true, 'pasta,garlic,tomatoes,oil', 'saute in the pan');
+INSERT INTO RECEIPE (receipename, servings, isvegetarian, ingredients, instructions) VALUES ('Butter Chicken', 5, false, 'chicken,cream,onions,butter', 'prepare chicken on high heat');
+INSERT INTO RECEIPE (receipename, servings, isvegetarian, ingredients, instructions) VALUES ('Palak Paneer', 2, true, 'spinach,paneer,tomatoes,oil', 'boil spinach for half an hour');
